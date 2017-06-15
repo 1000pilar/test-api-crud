@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express()
 const bodyParser = require('body-parser')
+const Promise = require('bluebird')
+
+
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/api-crud-mongoose');
