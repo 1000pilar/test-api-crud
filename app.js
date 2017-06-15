@@ -6,6 +6,7 @@ const Promise = require('bluebird')
 
 
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/api-crud-mongoose');
 
 var books = require('./routes/books')
