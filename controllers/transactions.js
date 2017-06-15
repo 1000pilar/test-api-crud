@@ -12,7 +12,12 @@ module.exports = {
     })
   },
   create: function(req, res) {
-    var transaction = new Transaction(req.body);
+    var transaction = new Transaction({
+    memberid: req.body.memberid,
+    days: req.body.days,
+    price: req.body.price,
+    booklist: req.body.booklist
+  });
     transaction.save(function (err, result) {
       if (err) {
         res.status(500)
